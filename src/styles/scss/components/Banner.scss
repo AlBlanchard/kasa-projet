@@ -1,0 +1,40 @@
+@import '../utils/variables';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 47px;
+
+    &__logo {
+        width: 145px;
+    }
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 140px;
+    height: 17px;
+    margin-top: 4px;
+    font-size: 12px;
+    color: $primary-color;
+
+    &__button {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        &--index {
+            width: 59px;
+        }
+
+        &--about {
+            width: 71px;
+        }
+
+        span {
+            margin-top: 4px;
+        }
+    }
+}
