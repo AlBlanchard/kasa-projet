@@ -1,7 +1,7 @@
 import logo from '../assets/logo_kasa.png'
-import '../styles/scss/components/Banner.scss'
+import '../styles/scss/components/Header.scss'
 
-function Banner() {
+function Header() {
     return (
         <header className='header'>
             <img src={logo} alt='logo de Kasa' className='header__logo' />
@@ -13,4 +13,4 @@ function Banner() {
     )
 }
 
-export default Banner
+export default Header

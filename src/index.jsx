@@ -1,9 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Home from './pages/Home';
-import { BrowserRouter as Router } from 'react-router-dom'
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './styles/css/normalize.css';
 import './styles/scss/base/_base.scss'
+
+import Home from './pages/Home';
+import Error from './pages/Error';
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -11,7 +16,14 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
-      <Home />
+      <Header />
+      <Routes>
+        <Route exact path='/' element={<Home />}>
+        </Route>
+        <Route path='*' element={<Error />}>
+        </Route>
+      </Routes>
+      <Footer />
     </Router>
   </React.StrictMode>,
 );

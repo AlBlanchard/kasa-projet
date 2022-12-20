@@ -1,0 +1,23 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 209px;
+    background-color: black;
+
+    &__logo {
+        width: 122px;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 46px;
+        color: white;
+        font-size: 12px;
+        line-height: 142.6%;
+        margin: 0;
+    }
+}

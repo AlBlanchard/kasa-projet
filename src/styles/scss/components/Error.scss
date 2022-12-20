@@ -1,0 +1,42 @@
+@import '../utils/variables';
+
+.errorSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 195px 0;
+    color: $primary-color;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 133px;
+
+        & h1 {
+            text-align: center;
+            height: 99px;
+            font-weight: 700;
+            font-size: 96px;
+        }
+
+        & p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 142.6%;
+        }
+    }
+
+    &__backLink {
+        text-decoration: underline;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 142.6%;
+    }
+}
