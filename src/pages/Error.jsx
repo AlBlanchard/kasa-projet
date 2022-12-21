@@ -1,4 +1,5 @@
-import '../styles/scss/components/Error.scss'
+import '../styles/scss/pages/Error.scss'
+import { Link } from 'react-router-dom'
 
 function Error() {
     return (
@@ -9,7 +10,7 @@ function Error() {
                     <p><span>Oups! La page que&nbsp;</span><span>vous demandez n'existe pas.</span></p>
                 </div>
 
-                <span className='errorSection__backLink'>Retourner sur la page d’accueil</span>
+                <Link to='/' className='errorSection__backLink'>Retourner sur la page d’accueil</Link>
             </section>
         </main>
     )

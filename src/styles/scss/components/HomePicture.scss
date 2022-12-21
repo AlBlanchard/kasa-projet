@@ -12,14 +12,13 @@
         margin-bottom: 22px;
         overflow: hidden;
         border-radius: 10px;
-        background: rgba($color: #000000, $alpha: 0.3);
 
 
         & img {
             max-width: 100%;
             min-height: 100%;
             object-fit: cover;
-            mix-blend-mode: darken;
+            filter: brightness(0.7);
         }
 
         & .hoverText {

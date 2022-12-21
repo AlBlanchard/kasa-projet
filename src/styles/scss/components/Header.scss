@@ -19,12 +19,13 @@
     height: 17px;
     margin-top: 4px;
     font-size: 12px;
-    color: $primary-color;
 
     &__button {
         display: flex;
         justify-content: flex-end;
         align-items: center;
+        color: $primary-color;
+        text-decoration: none;
 
         &--index {
             width: 59px;

@@ -34,9 +34,9 @@
     }
 
     &__backLink {
-        text-decoration: underline;
         font-weight: 500;
         font-size: 14px;
         line-height: 142.6%;
+        color: $primary-color;
     }
 }

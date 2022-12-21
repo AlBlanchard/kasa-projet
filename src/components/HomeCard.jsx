@@ -1,15 +1,16 @@
 import '../styles/scss/components/HomeCard.scss'
+import { Link } from 'react-router-dom'
 
 function HomeCard({ id, title, cover }) {
     return (
         <li className='homeCard' key={id}>
-            <div className='homeCard__container'>
+            <Link to={`/logements/${id}`} className='homeCard__container'>
                 <img src={cover} alt={`${title}`} />
 
                 <div className='cardHoverText'>
                     <span>{title}</span>
                 </div>
-            </div>
+            </Link>
         </li>
     )
 }
