@@ -1,6 +1,6 @@
 import '../styles/scss/components/DropDown.scss'
-import ddIcone from '../assets/dropdown_icone.png'
-import ddIconeBig from '../assets/dropdown_icone_big.png'
+import ddIcone from '../assets/icons/dropdown_icone.png'
+import ddIconeBig from '../assets/icons/dropdown_icone_big.png'
 import { useState } from 'react'
 
 function DropDown({ title, text }) {

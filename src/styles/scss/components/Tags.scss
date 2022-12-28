@@ -1,0 +1,22 @@
+@import '../utils/variables';
+
+.tagsContainer {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+
+    &__tag {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 84px;
+        height: 18px;
+        border-radius: 5px;
+        font-size: 10px;
+        line-height: 142.6%;
+        color: white;
+        background-color: $primary-color;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
