@@ -1,7 +1,6 @@
 @import '../utils/variables';
 
 .dropdown {
-    margin-bottom: 20px;
     position: relative;
 
     &__header {
@@ -42,16 +41,25 @@
 
     &__textContainer {
         display: flex;
+        flex-direction: column;
         position: relative;
         bottom: 5px;
         z-index: -1;
         width: 100%;
         background-color: #F7F7F7;
         border-radius: 5px;
+        padding: 23px 5px 5px 12px;
+        min-height: 144px;
 
         & p {
             color: $primary-color;
-            padding: 23px 5px 23px 12px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 17px;
+        }
+
+        & li {
+            color: $primary-color;
             font-weight: 400;
             font-size: 12px;
             line-height: 17px;
