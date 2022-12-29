@@ -13,9 +13,9 @@ function Stars(ratingObj) {
         <div className='starsContainer'>
             {range.map((stars) =>
                 rating >= stars ?
-                    <span key={stars.toString()}><img src={starFull} alt='étoile pleine'></img></span>
+                    <span className='starsContainer__star' key={stars.toString()}><img src={starFull} alt='étoile pleine'></img></span>
                     : stars <= range.length ?
-                        <span key={stars.toString()}><img src={starEmpty} alt='étoile vide'></img></span>
+                        <span className='starsContainer__star' key={stars.toString()}><img src={starEmpty} alt='étoile vide'></img></span>
                         : null
             )}
         </div>

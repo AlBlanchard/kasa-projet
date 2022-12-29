@@ -1,0 +1,10 @@
+.starsContainer {
+    display: flex;
+    gap: 5px;
+
+    &__star {
+        & img {
+            width: 15px;
+        }
+    }
+}

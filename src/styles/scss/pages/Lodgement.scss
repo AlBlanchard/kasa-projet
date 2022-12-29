@@ -1,18 +1,47 @@
 @import '../utils/variables';
 
+.lodgementSection {
 
-.lodgementTitle {
-    color: $primary-color;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 20px;
-    margin-bottom: 5px;
-}
+    &__carousel {
+        margin: 17px 0 19px 0;
+    }
 
-.lodgementLocation {
-    color: $primary-color;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20px;
-    margin-bottom: 10px;
+    &__titleAndTag {
+        margin-bottom: 16px;
+
+        & .titleAndLocation {
+            color: $primary-color;
+            margin-bottom: 10px;
+
+            &__title {
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 26px;
+                margin-bottom: 5px;
+            }
+
+            &__location {
+                height: 22px;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+        }
+    }
+
+    &__hostAndStars {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+
+    &__descrAndEquip {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
 }

@@ -1,4 +1,7 @@
 .aboutSection {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
     min-height: 465px;

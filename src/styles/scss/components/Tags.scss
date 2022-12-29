@@ -3,7 +3,7 @@
 .tagsContainer {
     display: flex;
     gap: 10px;
-    margin-bottom: 16px;
+    flex-wrap: wrap;
 
     &__tag {
         display: flex;
