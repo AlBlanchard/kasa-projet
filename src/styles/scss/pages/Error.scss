@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 195px 0;
+    margin: 195px 0 235px;
     color: $primary-color;
 
     &__container {
@@ -15,11 +15,16 @@
         align-items: center;
         margin-bottom: 133px;
 
-        & h1 {
-            text-align: center;
+        & .errorTitle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             height: 99px;
-            font-weight: 700;
-            font-size: 96px;
+
+            & h2 {
+                font-weight: 700;
+                font-size: 96px;
+            }
         }
 
         & p {
@@ -38,5 +43,34 @@
         font-size: 14px;
         line-height: 142.6%;
         color: $primary-color;
+    }
+}
+
+@media screen and (min-width: $responsive-limit) {
+    .errorSection {
+        margin: 169px 0;
+
+        &__container {
+            margin-bottom: 182px;
+
+            & .errorTitle {
+                margin-bottom: 66px;
+                width: 597px;
+                height: 263px;
+
+                & h2 {
+                    font-weight: 700;
+                    font-size: 288px;
+                }
+            }
+
+            & p {
+                font-size: 36px;
+            }
+        }
+
+        &__backLink {
+            font-size: 18px;
+        }
     }
 }

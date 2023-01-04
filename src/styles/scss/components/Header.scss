@@ -5,38 +5,66 @@
     justify-content: space-between;
     align-items: center;
     height: 47px;
-    margin: 20px 20px 16px 20px;
+    margin: 20px $page-margin 16px;
 
     &__logo {
         width: 145px;
     }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        width: 140px;
+        height: 17px;
+        margin-top: 4px;
+        font-size: 12px;
+        text-transform: uppercase;
+
+        &__button {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            color: $primary-color;
+            text-decoration: none;
+
+            &--index {
+                width: 59px;
+            }
+
+            &--about {
+                width: 71px;
+            }
+
+            span {
+                margin-top: 4px;
+            }
+        }
+    }
 }
 
-.nav {
-    display: flex;
-    justify-content: space-between;
-    width: 140px;
-    height: 17px;
-    margin-top: 4px;
-    font-size: 12px;
+@media screen and (min-width: $responsive-limit) {
+    .header {
+        margin: 40px $page-margin-desktop 63px;
 
-    &__button {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        color: $primary-color;
-        text-decoration: none;
-
-        &--index {
-            width: 59px;
+        &__logo {
+            width: auto;
         }
 
-        &--about {
-            width: 71px;
-        }
+        .nav {
+            width: 309px;
+            height: 34px;
+            font-size: 24px;
+            text-transform: capitalize;
 
-        span {
-            margin-top: 4px;
+            &__button {
+                &--index {
+                    width: 136px;
+                }
+
+                &--about {
+                    width: 116px;
+                }
+            }
         }
     }
 }

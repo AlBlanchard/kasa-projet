@@ -6,7 +6,9 @@ function Error() {
         <main>
             <section className='errorSection'>
                 <div className='errorSection__container'>
-                    <h1>404</h1>
+                    <div className='errorTitle'>
+                        <h2>404</h2>
+                    </div>
                     <p><span>Oups! La page que&nbsp;</span><span>vous demandez n'existe pas.</span></p>
                 </div>
 

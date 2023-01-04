@@ -1,3 +1,5 @@
+@import '../utils/variables';
+
 .footer {
     display: flex;
     flex-direction: column;
@@ -17,7 +19,16 @@
         height: 46px;
         color: white;
         font-size: 12px;
-        line-height: 142.6%;
+        line-height: 34px;
         margin: 0;
+    }
+}
+
+@media screen and (min-width: $responsive-limit) {
+    .footer {
+        &__text {
+            margin-top: 32px;
+            font-size: 24px;
+        }
     }
 }

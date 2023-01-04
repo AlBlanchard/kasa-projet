@@ -5,14 +5,14 @@
 }
 
 body {
-    max-width: 640px;
+    max-width: 1440px;
     margin: auto;
     font-family: $primary-font, sans-serif;
     text-rendering: auto;
 }
 
 main {
-    margin: 0 20px;
+    margin: 0 $page-margin;
 }
 
 h1,
@@ -26,4 +26,10 @@ p {
 
 li {
     list-style: none;
+}
+
+@media screen and (min-width: $responsive-limit) {
+    main {
+        margin: 0 $page-margin-desktop;
+    }
 }

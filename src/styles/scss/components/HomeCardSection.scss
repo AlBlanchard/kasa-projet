@@ -1,5 +1,6 @@
+@import '../utils/variables';
+
 .homeCardSection {
-    margin-bottom: 22px;
 
     &__list {
         display: flex;
@@ -7,5 +8,19 @@
         gap: 20px;
         margin: 0;
         padding: 0;
+    }
+}
+
+@media screen and (min-width: $responsive-limit) {
+    .homeCardSection {
+        background-color: #F7F7F7;
+        border-radius: 25px;
+        padding: 56px 50px;
+
+        &__list {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 60px 5.3%;
+        }
     }
 }

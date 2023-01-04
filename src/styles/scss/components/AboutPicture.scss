@@ -1,3 +1,5 @@
+@import '../utils/variables';
+
 .aboutPicture {
     margin: 17px 0 19px 0;
 
@@ -9,11 +11,31 @@
         border-radius: 10px;
         overflow: hidden;
 
-        & img {
+        & .picture {
             max-width: 100%;
             min-height: 100%;
             object-fit: cover;
             filter: brightness(0.7);
+
+            &--big {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $responsive-limit) {
+    .aboutPicture {
+        &__container {
+            & .picture {
+                &--small {
+                    display: none;
+                }
+
+                &--big {
+                    display: block;
+                }
+            }
         }
     }
 }
