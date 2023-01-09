@@ -13,10 +13,23 @@
         height: 18px;
         border-radius: 5px;
         font-size: 10px;
-        line-height: 142.6%;
+        line-height: 14px;
         color: white;
         background-color: $primary-color;
         padding-left: 10px;
         padding-right: 10px;
     }
+}
+
+@media screen and (min-width: $responsive-limit) {
+    .tagsContainer {
+        &__tag {
+            min-width: 115px;
+            height: 25px;
+            border-radius: 10px;
+            font-size: 14px;
+            line-height: 28px;
+        }
+    }
+
 }

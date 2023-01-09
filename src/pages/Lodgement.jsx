@@ -22,36 +22,36 @@ function Lodgement() {
                     />
                 </section>
 
-                <section className='lodgementSection__titleAndTag'>
+                <section className='lodgementSection__middle'>
                     <div className='titleAndLocation'>
                         <h2 className='titleAndLocation__title'>{datas.title}</h2>
                         <p className='titleAndLocation__location'>{datas.location}</p>
+
+                        <Tags
+                            tags={datas.tags}
+                        />
                     </div>
 
-                    <Tags
-                        tags={datas.tags}
-                    />
-                </section>
-
-                <section className='lodgementSection__hostAndStars'>
-                    <Stars
-                        rating={datas.rating}
-                    />
-                    <HostCard
-                        name={host.name}
-                        picture={host.picture}
-                    />
+                    <div className='hostAndStars'>
+                        <Stars
+                            rating={datas.rating}
+                        />
+                        <HostCard
+                            name={host.name}
+                            picture={host.picture}
+                        />
+                    </div>
                 </section>
 
                 <section className='lodgementSection__descrAndEquip'>
                     <Dropdown
                         title='Description'
-                        text={datas.description}
+                        lodgDescription={datas.description}
                     />
 
                     <Dropdown
                         title='Equipements'
-                        text={datas.equipments}
+                        equipments={datas.equipments}
                     />
                 </section>
 

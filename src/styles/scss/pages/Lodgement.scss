@@ -4,9 +4,12 @@
 
     &__carousel {
         margin: 17px 0 19px 0;
+        height: 255px;
     }
 
-    &__titleAndTag {
+    &__middle {
+        display: flex;
+        flex-direction: column;
         margin-bottom: 16px;
 
         & .titleAndLocation {
@@ -26,15 +29,14 @@
                 font-size: 14px;
                 line-height: 20px;
             }
-
         }
-    }
 
-    &__hostAndStars {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 16px;
+        & .hostAndStars {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
     }
 
     &__descrAndEquip {
@@ -44,4 +46,60 @@
         margin-bottom: 20px;
     }
 
+}
+
+@media screen and (min-width: $responsive-limit) {
+    .lodgementSection {
+        &__carousel {
+            margin: 20px 0 24px 0;
+            height: 415px;
+        }
+
+        &__middle {
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 24px;
+
+            & .titleAndLocation {
+                margin-bottom: 0;
+
+                &__title {
+                    font-size: 36px;
+                    line-height: 51px;
+                    margin-bottom: 0;
+                }
+
+                &__location {
+                    height: 26px;
+                    font-size: 18px;
+                    line-height: 26px;
+                    margin-bottom: 20px;
+                }
+            }
+
+            & .hostAndStars {
+                flex-direction: column-reverse;
+                align-items: flex-end;
+                justify-content: flex-end;
+                gap: 24px;
+                margin-bottom: 0;
+            }
+        }
+
+        &__descrAndEquip {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 76px;
+            margin-bottom: 20px;
+
+            & .dropdown {
+                flex-basis: 50%;
+
+                &__textContainer {
+                    height: calc(100% - 42px);
+                }
+            }
+        }
+    }
 }

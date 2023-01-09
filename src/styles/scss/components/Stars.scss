@@ -1,10 +1,20 @@
+@import '../utils/variables';
+
 .starsContainer {
     display: flex;
     gap: 5px;
+    height: 15px;
 
     &__star {
         & img {
-            width: 15px;
+            height: 100%;
         }
+    }
+}
+
+@media screen and (min-width: $responsive-limit) {
+    .starsContainer {
+        gap: 10px;
+        height: 30px;
     }
 }

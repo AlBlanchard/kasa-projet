@@ -27,11 +27,29 @@
         height: 32px;
         border-radius: 50%;
         background-color: #C4C4C4;
+        overflow: hidden;
 
         & .photo {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: $responsive-limit) {
+    .hostCard {
+        height: 64px;
+
+        &__name {
+            & span {
+                font-size: 18px;
+                line-height: 26px;
+            }
+        }
+
+        &__photoContainer {
+            width: 64px;
+            height: 64px;
         }
     }
 }

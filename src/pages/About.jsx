@@ -13,7 +13,7 @@ function About() {
                     <React.Fragment key={title}>
                         <DropDown
                             title={title}
-                            text={text}
+                            aboutText={text}
                         />
                     </React.Fragment>
                 ))}

@@ -1,13 +1,15 @@
+@import '../utils/variables';
+
 .carousel {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 255px;
+    height: 100%;
     border-radius: 10px;
     overflow: hidden;
     position: relative;
 
-    & img {
+    &__image {
         max-width: 100%;
         min-height: 100%;
         object-fit: cover;
@@ -21,8 +23,8 @@
         position: absolute;
 
         & .arrow {
-            width: 20px;
-            height: 20px;
+            width: 24px;
+            height: 24px;
             padding: 0;
             background-color: rgba($color: #000000, $alpha: 0);
             border: none;
@@ -31,6 +33,40 @@
             &--right {
                 transform: rotate(180deg);
             }
+
+            & .icon {
+                height: 20px;
+            }
+        }
+    }
+
+    &__imgNbr {
+        display: none;
+    }
+}
+
+@media screen and (min-width: $responsive-limit) {
+    .carousel {
+        &__arrows {
+            & .arrow {
+                width: 96px;
+                height: 120px;
+
+                & .icon {
+                    height: 79px;
+                }
+            }
+        }
+
+        &__imgNbr {
+            display: block;
+            position: absolute;
+            align-self: flex-end;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 26px;
+            color: white;
+            margin-bottom: 15px;
         }
     }
 }
