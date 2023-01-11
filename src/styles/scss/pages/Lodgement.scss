@@ -1,7 +1,6 @@
 @import '../utils/variables';
 
 .lodgementSection {
-
     &__carousel {
         margin: 17px 0 19px 0;
         height: 255px;
@@ -35,7 +34,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 16px;
         }
     }
 
@@ -61,7 +59,6 @@
             margin-bottom: 24px;
 
             & .titleAndLocation {
-                margin-bottom: 0;
 
                 &__title {
                     font-size: 36px;
@@ -96,8 +93,26 @@
             & .dropdown {
                 flex-basis: 50%;
 
+                & .dropdown {
+                    &__header {
+                        height: 52px;
+                        padding-left: 20px;
+                        padding-right: 12px;
+
+                        & .title {
+                            font-size: 18px;
+                            line-height: 26px;
+                        }
+                    }
+                }
+
                 &__textContainer {
                     height: calc(100% - 42px);
+
+                    & .text {
+                        font-size: 18px;
+                        line-height: 26px;
+                    }
                 }
             }
         }
