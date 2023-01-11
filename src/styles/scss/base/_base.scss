@@ -5,7 +5,7 @@
 }
 
 body {
-    max-width: 1440px;
+    max-width: 1920px;
     margin: auto;
     font-family: $primary-font, sans-serif;
     text-rendering: auto;
@@ -13,6 +13,7 @@ body {
 
 main {
     margin: 0 $page-margin;
+    min-height: 745px;
 }
 
 h1,
@@ -31,5 +32,6 @@ li {
 @media screen and (min-width: $responsive-limit) {
     main {
         margin: 0 $page-margin-desktop;
+        min-height: 916px;
     }
 }

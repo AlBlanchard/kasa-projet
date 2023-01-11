@@ -46,7 +46,7 @@ function Lodgement() {
                 <section className='lodgementSection__descrAndEquip'>
                     <Dropdown
                         title='Description'
-                        lodgDescription={datas.description}
+                        text={datas.description}
                     />
 
                     <Dropdown

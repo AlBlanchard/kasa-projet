@@ -48,17 +48,9 @@
         padding: 23px 5px 5px 12px;
         min-height: 144px;
 
-        & p {
+        & .text {
             color: $primary-color;
             font-weight: 400;
-        }
-
-        & .aboutText {
-            font-size: 12px;
-            line-height: 17px;
-        }
-
-        & .lodgDescription {
             font-size: 12px;
             line-height: 17px;
         }
@@ -75,14 +67,7 @@
 @media screen and (min-width: $responsive-limit) {
     .dropdown {
         &__header {
-            height: 47px;
-            padding-left: 18px;
-            padding-right: 11px;
             border-radius: 10px;
-
-            & .title {
-                font-size: 24px;
-            }
 
             & button {
                 & .ddIcone {
@@ -96,16 +81,6 @@
             min-height: auto;
             padding: 33px 27px 18px 18px;
             border-radius: 10px;
-
-            & .aboutText {
-                font-size: 24px;
-                line-height: 34px;
-            }
-
-            & .lodgDescription {
-                font-size: 18px;
-                line-height: 26px;
-            }
 
             & .ddLine {
                 font-size: 18px;
