@@ -7,56 +7,60 @@ import Stars from '../components/Stars'
 import HostCard from '../components/HostCard'
 import Dropdown from '../components/Dropdown'
 import React from 'react';
+import Error from '../pages/Error';
 
 function Lodgement() {
     const { id } = useParams();
     const datas = apiRes.find((element) => { return element.id === id });
-    const host = datas.host
 
     return (
-        <main>
-            <section className='lodgementSection' key={id}>
-                <section className='lodgementSection__carousel'>
-                    <Carousel
-                        pictures={datas.pictures}
-                    />
-                </section>
-
-                <section className='lodgementSection__middle'>
-                    <div className='titleAndLocation'>
-                        <h2 className='titleAndLocation__title'>{datas.title}</h2>
-                        <p className='titleAndLocation__location'>{datas.location}</p>
-
-                        <Tags
-                            tags={datas.tags}
+        datas ? (
+            <main>
+                <section className='lodgementSection' key={id}>
+                    <section className='lodgementSection__carousel'>
+                        <Carousel
+                            pictures={datas.pictures}
                         />
-                    </div>
+                    </section>
 
-                    <div className='hostAndStars'>
-                        <Stars
-                            rating={datas.rating}
+                    <section className='lodgementSection__middle'>
+                        <div className='titleAndLocation'>
+                            <h2 className='titleAndLocation__title'>{datas.title}</h2>
+                            <p className='titleAndLocation__location'>{datas.location}</p>
+
+                            <Tags
+                                tags={datas.tags}
+                            />
+                        </div>
+
+                        <div className='hostAndStars'>
+                            <Stars
+                                rating={datas.rating}
+                            />
+                            <HostCard
+                                name={datas.host.name}
+                                picture={datas.host.picture}
+                            />
+                        </div>
+                    </section>
+
+                    <section className='lodgementSection__descrAndEquip'>
+                        <Dropdown
+                            title='Description'
+                            text={datas.description}
                         />
-                        <HostCard
-                            name={host.name}
-                            picture={host.picture}
+
+                        <Dropdown
+                            title='Equipements'
+                            equipments={datas.equipments}
                         />
-                    </div>
+                    </section>
+
                 </section>
-
-                <section className='lodgementSection__descrAndEquip'>
-                    <Dropdown
-                        title='Description'
-                        text={datas.description}
-                    />
-
-                    <Dropdown
-                        title='Equipements'
-                        equipments={datas.equipments}
-                    />
-                </section>
-
-            </section>
-        </main>
+            </main>
+        ) : (
+            <Error />
+        )
     )
 }
 

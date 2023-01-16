@@ -19,7 +19,7 @@ function DropDown({ title, text, equipments }) {
 
                     <ul className='dropdown__textContainer'>
                         {equipments.map(ddLine => (
-                            <li className='ddLine'>{ddLine}</li>
+                            <li className='ddLine' key={ddLine}>{ddLine}</li>
                         ))}
                     </ul>
                 </div >
