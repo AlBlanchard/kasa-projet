@@ -25,6 +25,8 @@
 @media screen and (min-width: $responsive-limit) {
     .aboutPicture {
         &__container {
+            border-radius: 25px;
+
             & .picture {
                 &--small {
                     display: none;
@@ -36,4 +38,18 @@
             }
         }
     }
+
+    .aboutSection {
+        & .dropdown {
+
+            &__header {
+                border-radius: 5px;
+            }
+
+            &__textContainer {
+                border-radius: 5px;
+            }
+        }
+    }
+
 }
